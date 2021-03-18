@@ -93,7 +93,7 @@ func printMetricForCharDevice(data *dogstatsd.Metric) {
 func main() {
 	ln, err := net.ListenUDP("udp", &net.UDPAddr{
 		Port: 8125,
-		IP:   net.ParseIP("127.0.0.1"),
+		IP:   net.ParseIP("0.0.0.0"),
 	})
 
 	if err != nil {
